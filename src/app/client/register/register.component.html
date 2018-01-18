@@ -1,0 +1,124 @@
+<div class="container-fluid no-gutters bg-white">
+  <div class="row">
+    <div class="col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col-md-8 col-lg-8 col-xl-8">
+      <div class="card border-0 rounded-0">
+        <div class="card-body rounded-0 bg-white jumbotron">
+          <div class="jumbotron bg-white">
+            <form class="form" [formGroup]="registerForm" (ngSubmit)="registerForm.valid ? onFormSubmit() : ''">
+              <div>
+                <p class="h2" translate>Register</p>
+                <p class="h4 pb-1">Step1 : Verify your f details</p>
+                <label>* Denotes required fields</label>
+                <p class="h6 pb-1">Customer Type</p>
+              </div>
+              <div class="btn-group pb-1" data-toggle="buttons">
+                <label class="btn border-dark rounded-0 individualbutton">
+                  <input type="radio" class="card-link border individualbutton " (click)="onIndividual()">Individual
+                </label>
+                <label class="btn border-dark rounded-0 smallbusinessbutton ">
+                  <input type="radio" class="card-link border smallbusinessbutton " (click)="onBusiness()">Small Business
+                </label>
+              </div>
+              <div *ngIf="showIndividual">
+                <div class="form-group">
+                  <label for="name">
+                    <b translate>First Name</b>*
+                  </label>
+                  <input type="text" class="form-control border-secondary" id="firstName" autocomplete="off" formControlName="firstName">
+                </div>
+                <div class="form-group">
+                  <label for="name">
+                    <b translate>Last Name</b>*
+                  </label>
+                  <input type="text" class="form-control border-secondary" id="lastName" autocomplete="off" formControlName="lastName">
+                </div>
+                <div class="form-group">
+                  <label for="name">
+                    <b translate>Plan Number</b>
+                  </label>
+                  <input type="text" class="form-control border-secondary" id="planNumber" autocomplete="off" formControlName="planNumber">
+                </div>
+                <div class="form-group">
+                  <label for="name">
+                    <b translate>Identification Number</b>
+                  </label>
+                  <br>
+                  <input type="text" class="form-control h-50 border-secondary" id="identificationNumber" autocomplete="off" formControlName="idNumber">
+                </div>
+                <div class="form-group">
+                  <label for="name">
+                    <b translate>Postal Code</b>*
+                  </label>
+                  <br>
+                  <input type="text" class="form-control h-50 border-secondary" id="postalCode" autocomplete="off" formControlName="postalCode">
+                </div>
+              </div>
+            </form>
+            <form class="form" [formGroup]="registerForm" (ngSubmit)="registerForm.valid ? onFormSubmit() : ''">
+              <div *ngIf="showBusiness">
+                <div class="form-group">
+                  <label for="name">
+                    <b translate>Business Name</b>*
+                  </label>
+                  <input type="text" class="form-control border-secondary" id="businessName" autocomplete="off" formControlName="businessName">
+                </div>
+                <div class="form-group">
+                  <label for="name">
+                    <b translate>Identification Number</b>*
+                  </label>
+                  <br>
+                  <input type="text" class="form-control  h-50 border-secondary " id="IdentificationNumber" autocomplete="off" formControlName="idNumber">
+                </div>
+                <div class="form-group">
+                  <label for="name">
+                    <b translate>Postal Code</b>*
+                  </label>
+                  <br>
+                  <input type="text" class="form-control  h-50 border-secondary" id="postalCode" autocomplete="off" formControlName="postalCode">
+                </div>
+              </div>
+            </form>
+            <div>
+              <button type="submit" class="btn cx-btn btn-success" (click)="btnSubmit()" translate>Next</button>
+            </div>
+            <div class="pt-2">
+              <a class="pb-2" (click)="open(content)">
+                <u translate>Having trouble? Get a registration code.</u>
+              </a>
+            </div>
+          </div>
+          <ng-template #content let-c="close" let-d="dismiss" class="border-0 rounded-0 no-gutters">
+            <div class="modal-header border-0 rounded-0 no-gutters">
+              <p class="modal-title h4" translate>Request a Registration Code</p>
+              <button type="button" class="close" aria-label="Close" (click)="c('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label translate> Call
+                <b>1-519-630-5715</b> and request a registration code. </label>
+              <div class="card border-0 bg-white">
+                <form [formGroup]="registrationCodeForm" (ngSubmit)="registrationCodeForm.valid ? onFormSubmit() : ''">
+                  <div class="form-group">
+                    <label for="name">
+                      <b translate>Registration Code</b>*
+                    </label>
+                    <input type="text" class="form-control w-50" id="name" autocomplete="off" formControlName="registrationCode">
+                  </div>
+                </form>
+              </div>
+              <div>
+                <Button class="btn btn-success" (click)="c('Close click')" translate>Next</Button>
+                <a class="text-success" (click)="c('Close click')">
+                  <u translate>Cancel</u>
+                </a>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2 col-xl-2"></div>
+</div>

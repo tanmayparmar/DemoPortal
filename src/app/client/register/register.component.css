@@ -1,0 +1,10 @@
+
+  .individualbutton:active:focus {
+  background: #036a3c;
+  color : white
+}
+
+.smallbusinessbutton:active:focus {
+  background: #036a3c;
+  color : white
+}

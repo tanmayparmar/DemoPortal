@@ -1,0 +1,17 @@
+.container-fluid{
+  background-color: #3b3b3b;
+  height: 100vh;
+  }
+
+
+  html,
+  body {
+    height: 100%;
+    margin: 0
+  }
+
+
+  html .container-fluid {
+    font-size: 5rem;
+  }
+

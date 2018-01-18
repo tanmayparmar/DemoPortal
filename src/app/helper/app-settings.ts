@@ -1,0 +1,20 @@
+export class AppSettings {
+  public static ACCOUNT_SUBSCRIBER_API = '/api/Account/Subscriber';
+  public static ACCOUNT_REGISTRATIONCODE_API= '/api/Account/RegistrationCode';
+  public static ACCOUNT_REGISTRATION_API= '/api/Account/Registration';
+  public static INHOUSE_SUBSCRIBERS_API= '/api/InHouse/Subscribers';
+  public static INHOUSE_REGISTRATION_API= '/api/InHouse/RegistrationCode';
+  public static SHARE_LANGUAGE_API= '/api/Share/Language';
+  public static SUBSCRIBER_DASHBOARD_API= '/api/Subscriber/DashBoard';
+  public static SUBSCRIBER_DOCUMENT_API= '/api/Subscriber/Document';
+  public static ACCOUNT_LOGIN_API= '/Account/Login';
+  public static ACCOUNT_LOGINWITHRECOVERYCODE_API= '/Account/LoginWithRecoveryCode';
+  public static ACCOUNT_LOCKOUT_API= '/Account/Lockout';
+  public static ACCOUNT_REGISTER_API= '/Account/Register';
+  public static ACCOUNT_LOGOUT_API= '/Account/Logout';
+  public static ACCOUNT_CONFIRMEMAIL_API= '/Account/ConfirmEmail';
+  public static ACCOUNT_FORGOTPASSWORD_API= '/Account/ForgotPassword';
+  public static ACCOUNT_FORGOTPASSWORDCONFIRMATION_API = '/Account/ForgotPasswordConfirmation';
+  public static ACCOUNT_RESETPASSWORD_API= '/Account/ResetPassword';
+  public static ACCOUNT_RESETPASSWORDCONFIRMATION_API= '/Account/ResetPasswordConfirmation';
+  public static ACCOUNT_ACCESSDENIED_API= '/Account/AccessDenied'; }

@@ -1,0 +1,89 @@
+<div class="row mx-auto no-gutters">
+  <div class="col col-sm-12 col-md-12 col-lg-2 col-xl-2"></div>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-8">
+    <div class="card rounded-0 border-0 mx-auto bg-light ">
+      <div class="row no-gutters">
+        <div class="col-sm-3">
+          <div class="card bg-light float-right border-0">
+            <div class="card-body w-25">
+              <div class="media">
+                <img src="../../../assets/profile_ic.svg" alt="Generic placeholder image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card border-0 bg-light">
+            <label class="h2 p-2 mx-auto"> Jayden Davidson</label>
+            <button class="btn btn-muted text-dark w-75 mx-auto" (click)="open(content)">Generate Registration Code</button>
+            <ng-template #content let-c="close" let-d="dismiss" class="p-5">
+              <div class="modal-header border-0">
+                <h3 class="modal-title">Generate Registration Code</h3>
+                <br>
+                <button type="button" class="close" aria-label="Close" (click)="c('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="card border-0 bg-white">
+                  <form>
+                    <div class="form-group">
+                      <label for="name">Your Registration Code is:</label>
+                      <label for="name" class="pl-3">
+                        <b>54567894</b>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div>
+                  <Button class="btn btn-success pl-3" (click)="c('Close click')" [routerLink]="['/register2'] ">OK</Button>
+                  <a class="text-success pl-3" (click)="c('Close click')">
+                    <u>Cancel</u>
+                  </a>
+                </div>
+              </div>
+            </ng-template>
+            <table class="table table-responsive table-sm">
+              <tbody>
+                <tr>
+                  <th>Status:</th>
+                  <td>Unregistered
+                  </td>
+                </tr>
+                <tr>
+                  <th>Group ID:</th>
+                  <td>32323r</td>
+                </tr>
+                <tr>
+                  <th>Subscriber ID</th>
+                  <td>johncarter@mail.com</td>
+                </tr>
+                <tr>
+                  <th>Postal Code</th>
+                  <td>dsd</td>
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <td>johncarter@mail.com
+                    <a class="pl-2 text-success">
+                      <u>Edit</u>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Password</th>
+                  <td>
+                    <a class="text-success">
+                      <u>Reset Password</u>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-12 col-md-12 col-lg-2 col-xl-2"></div>
+</div>

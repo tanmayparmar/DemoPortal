@@ -1,0 +1,52 @@
+<div class="container-fluid no-gutters bg-white">
+  <div class="row">
+    <div class="col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col-md-8 col-lg-8 col-xl-8">
+      <div class="card border-0 rounded-0 bg-white">
+        <div class="card-body rounded-0 bg-white jumbotron">
+          <h2 translate>Register</h2>
+          <p class="pt-2 h5" translate>Step 2: Create Your Account</p>
+          <form role="form" [formGroup]="registerForm" (ngSubmit)="onFormSubmit()">
+            <div>
+              <div class="form-group">
+                <label for="name">
+                  <b translate>Email Address</b>*
+                </label>
+                <input type="text" class="form-control w-75" id="name" autocomplete="off" formControlName="emailAddress">
+              </div>
+              <div class="form-group">
+                <label for="name">
+                  <b translate>Password</b>*
+                </label>
+                <input type="password " class="form-control w-75" id="name" autocomplete="off" formControlName="passWord">
+              </div>
+              <div class="form-group">
+                <label for="name">
+                  <b translate>Confirm Password</b>*
+                </label>
+                <input type="password" class="form-control w-75" id="name" autocomplete="off" formControlName="confirmPassword">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" formControlName="chckBoxTermsAndConditions" translate> I agree with the
+                  <a href=#>
+                    <u class="text-success" translate>terms and conditions</u>
+                  </a>
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" formControlName="chckBoxEmailUse" translate> I acknowledge that my email will be used for future communication from Manulife
+                </label>
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-success" translate>Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2 col-xl-2"></div>
+</div>
