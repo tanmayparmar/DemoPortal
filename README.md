@@ -1,4 +1,4 @@
-# AytraAngular
+# Angular Portal Demo
 
 The whole purpose of this app is to provide a basic structure for an angular app. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
